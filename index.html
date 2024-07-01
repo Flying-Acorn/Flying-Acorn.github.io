@@ -7,9 +7,10 @@
     <title>Flying Acorn | Mobile Game Development Studio | Unity Experts</title>
     <meta name="description"
         content="Flying Acorn is a game development studio specializing in Unity-based mobile games. With over 5 years of experience and 100+ hypercasual prototypes, we craft extraordinary gaming experiences.">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
@@ -21,6 +22,13 @@
 
     <link rel="stylesheet" href="assets/styles/main.css">
     <link rel="canonical" href="https://www.flyingacorn.studio/" />
+
+    <meta property="og:title" content="Flying Acorn | Mobile Game Development Studio">
+    <meta property="og:description"
+        content="Flying Acorn is a game development studio specializing in Unity-based mobile games. With over 5 years of experience and 100+ hypercasual prototypes, we craft extraordinary gaming experiences.">
+    <meta property="og:image" content="https://www.flyingacorn.studio/assets/images/Logo.jpg">
+    <meta property="og:url" content="https://www.flyingacorn.studio/">
+    <meta property="og:type" content="website">
 
     <script type="application/ld+json">
     {
@@ -41,14 +49,15 @@
 
 <body>
     <header>
-        <img src="assets/images/Logo.jpg" alt="Flying Acorn Logo" class="logo">
+        <img src="assets/images/Logo.jpg" alt="Flying Acorn Logo" class="logo" width="100" height="100">
         <h1>Flying Acorn</h1>
         <p>Crafting Extraordinary Gaming Experiences</p>
     </header>
 
-    <nav>
-        <button class="navbar-toggle" onclick="toggleNavbar()">☰</button>
-        <ul>
+    <nav aria-label="Main Navigation">
+        <button class="navbar-toggle" onclick="toggleNavbar()" aria-expanded="false" aria-controls="main-menu">☰
+            Menu</button>
+        <ul id="main-menu">
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -94,31 +103,34 @@
                 active users, we've honed our skills in creating addictive and scalable gaming experiences.</p>
             <ul class="grid">
                 <li class="icon card">
-                    <img src="assets/images/icons/Kalamatic.png" alt="Kalamatic - Word Game with 2M+ downloads">
+                    <img src="assets/images/icons/Kalamatic.png" alt="Kalamatic app icon" width="64" height="64"
+                        loading="lazy">
                     <h3>Kalamatic</h3>
                     <p>2M+ downloads, 65K+ daily active users</p>
                     <p><a href="https://apps.apple.com/us/app/%DA%A9%D9%84%D9%85%D8%A7%D8%AA%DB%8C%DA%A9-kalamatic/id1476429715"
-                            target="_blank">AppStore</a></p>
+                            target="_blank" rel="noopener">AppStore</a></p>
                 </li>
                 <li class="icon card">
                     <img src="assets/images/icons/CoupleyYoga.png" alt="Couples Yoga - #1 App with 20M+ downloads">
                     <h3>Couples Yoga</h3>
                     <p>20M+ downloads, #1 on App Store and Google Play</p>
-                    <p><a href="https://apps.apple.com/us/app/couples-yoga/id1563288539" target="_blank">AppStore</a>
+                    <p><a href="https://apps.apple.com/us/app/couples-yoga/id1563288539" target="_blank"
+                            rel="noopener">AppStore</a>
                     </p>
                 </li>
                 <li class="icon card">
                     <img src="assets/images/icons/BeautySalon.png" alt="Beauty Salon - Popular beauty game">
                     <h3>Beauty Salon</h3>
                     <p>$0.29 CPI, 22% D1 retention</p>
-                    <p><a href="https://apps.apple.com/us/app/beauty-salon-3d/id1545813093?l=ru"
-                            target="_blank">AppStore</a></p>
+                    <p><a href="https://apps.apple.com/us/app/beauty-salon-3d/id1545813093?l=ru" target="_blank"
+                            rel="noopener">AppStore</a></p>
                 </li>
                 <li class="icon card">
                     <img src="assets/images/icons/DoctorTycoon.png" alt="Doctor Tycoon - Medical simulation game">
                     <h3>Doctor Tycoon</h3>
                     <p>$0.19 CPI, 37% D1 retention</p>
-                    <p><a href="https://apps.apple.com/us/app/doctor-tycoon/id1555050989" target="_blank">AppStore</a>
+                    <p><a href="https://apps.apple.com/us/app/doctor-tycoon/id1555050989" target="_blank"
+                            rel="noopener">AppStore</a>
                     </p>
                 </li>
             </ul>
@@ -206,17 +218,18 @@
             <p>Ready to bring your game idea to life? We're excited to hear from you!</p>
             <div class="contact-buttons">
                 <a href="mailto:hello@flyingacorn.studio" class="btn">Get in Touch</a>
-                <a href="https://calendly.com/alisharpasand" class="btn" target="_blank">Schedule a Meeting</a>
+                <a href="https://calendly.com/alisharpasand" class="btn" target="_blank" rel="noopener">Schedule a
+                    Meeting</a>
             </div>
         </section>
 
         <footer>
-            <p>Made with ❤️ by Flying Acorn</p>
+            <p>Made with <span aria-label="love">❤️</span> by Flying Acorn</p>
             <p>Espoo, Finland</p>
         </footer>
     </main>
 
-    <script src="assets/scripts/main.js"></script>
+    <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>

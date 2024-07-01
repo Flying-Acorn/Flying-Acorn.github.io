@@ -21,6 +21,3 @@ window.addEventListener('scroll', function () {
         navbar.classList.remove('transparent');
     }
 });
-
-window.addEventListener('scroll', handleScroll);
-window.addEventListener('load', handleScroll);
