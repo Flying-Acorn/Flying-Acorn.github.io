@@ -742,3 +742,4 @@ pubnative.net, 1007040, RESELLER, d641df8625486a7b
 pubnative.net, 1007974, RESELLER, d641df8625486a7b
 pubnative.net, 1008379, RESELLER, d641df8625486a7b
 playdigo.com, 1965, RESELLER, 92011346d63d3c30
+zmaticoo.com, 5135704, RESELLER
