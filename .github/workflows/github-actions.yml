@@ -1,0 +1,30 @@
+﻿name: Convert report
+on:
+  - pull_request
+
+jobs:
+  get-unused-dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Look for unused librairies
+        run: |
+          mvn dependency:analyze-report --no-transfer-progress
+      - name: Convert HTML to Markdown
+        id: html2markdown
+        if: always()
+        uses: rknj/html2markdown@v0.1.0
+        with:
+          html-file: "index.html"
+      - name: Create issue with report
+        if: always()
+        uses: dacbd/create-issue-action@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: Maven dependency reports (unused dependencies)
+          body: |
+            ${{ steps.html2markdown.outputs.markdown-content }}
+          assignees: rknj
+      - name: Show content of generated markdown file
+        if: always()
+        run: |
+          cat ${{ steps.html2markdown.outputs.markdown-file }}
