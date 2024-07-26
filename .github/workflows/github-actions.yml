@@ -16,7 +16,7 @@ jobs:
                 python -m pip install --upgrade pip
                 pip install html2text
             - name: Generate Markdown
-              run: html2text index.html > README.md
+              run: html2text --ignore-images --single-line-break --wrap-list-items -d index.html > README.md
             - name: verify changes
               id: verify_changes
               run: |
