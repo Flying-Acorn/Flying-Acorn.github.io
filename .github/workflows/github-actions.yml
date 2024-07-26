@@ -20,19 +20,6 @@ jobs:
                 pip install trafilatura==1.8.1
             - name: Generate Markdown
               run: python assets/python/generate_markdown.py --input index.html --output README.md
-            - name: Final
-              id: final
-              run: cat README.md >> "$GITHUB_OUTPUT"
-            - name: Go to .github repository
-              uses: actions/checkout@v4
-              with:
-                    repository: 'Flying-Acorn/.github'
-                    ref: main
-                    token: ${{ secrets.GITHUB_TOKEN }}
-
-            - name: Update readme
-              run: |
-                echo "${{ needs.job1.outputs.output1 }}" > README.md
             - name: Commit changes
               run: |
                 git config --local user.email "amir@flyingacorn.studio"
