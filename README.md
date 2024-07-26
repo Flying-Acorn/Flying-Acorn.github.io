@@ -1,16 +1,14 @@
-![Flying Acorn Logo](assets/images/Logo.jpg)
-
 # Flying Acorn
 
 Crafting Extraordinary Gaming Experiences
 
 ☰ Menu
 
-  * About
-  * Services
-  * Projects
-  * Team
-  * Contact
+  - About
+  - Services
+  - Projects
+  - Team
+  - Contact
 
 ## About Us
 
@@ -22,20 +20,16 @@ interactive entertainment.
 
 ## Our Services
 
-  * ### Game Development
-
+  - ### Game Development
 Crafting engaging games using Unity for iOS and Android platforms.
 
-  * ### Game Design
-
+  - ### Game Design
 Bringing your game concepts to life with our creative design expertise.
 
-  * ### Server & Backend
-
+  - ### Server & Backend
 Implementing robust backend solutions and maintaining player data.
 
-  * ### Ad Campaigns
-
+  - ### Ad Campaigns
 Creating captivating game creatives and managing effective ad campaigns.
 
 ## Our Projects
@@ -44,34 +38,22 @@ With a track record of developing games that have amassed millions of
 downloads and thousands of daily active users, we've honed our skills in
 creating addictive and scalable gaming experiences.
 
-  * ![Kalamatic app icon](assets/images/icons/Kalamatic.png)
-
-### Kalamatic
-
+  - ### Kalamatic
 2M+ downloads, 65K+ daily active users
 
 [AppStore](https://apps.apple.com/us/app/%DA%A9%D9%84%D9%85%D8%A7%D8%AA%DB%8C%DA%A9-kalamatic/id1476429715)
 
-  * ![Couples Yoga - #1 App with 20M+ downloads](assets/images/icons/CoupleyYoga.png)
-
-### Couples Yoga
-
+  - ### Couples Yoga
 20M+ downloads, #1 on App Store and Google Play
 
 [AppStore](https://apps.apple.com/us/app/couples-yoga/id1563288539)
 
-  * ![Beauty Salon - Popular beauty game](assets/images/icons/BeautySalon.png)
-
-### Beauty Salon
-
+  - ### Beauty Salon
 $0.29 CPI, 22% D1 retention
 
 [AppStore](https://apps.apple.com/us/app/beauty-salon-3d/id1545813093?l=ru)
 
-  * ![Doctor Tycoon - Medical simulation game](assets/images/icons/DoctorTycoon.png)
-
-### Doctor Tycoon
-
+  - ### Doctor Tycoon
 $0.19 CPI, 37% D1 retention
 
 [AppStore](https://apps.apple.com/us/app/doctor-tycoon/id1555050989)
@@ -86,21 +68,14 @@ large-scale published games.
 
 ### Publishers We've Worked With
 
-  * #### Voodoo ![Voodoo logo](assets/images/publishers/voodoo-logo.jpeg)
-
-  * #### SuperSonic ![SuperSonic logo](assets/images/publishers/supersonic-logo.jpeg)
-
-  * #### Moonee ![Moonee logo](assets/images/publishers/moonee-logo.jpeg)
-
-  * #### Green Panda ![Green Panda logo](assets/images/publishers/green-panda-logo.jpeg)
-
-  * #### Homa Games ![Homa Games logo](assets/images/publishers/homa-games-logo.jpeg)
-
-  * #### Lion Studio ![Lion Studio logo](assets/images/publishers/lion-studio-logo.jpeg)
-
-  * #### BoomBit ![BoomBit logo](assets/images/publishers/boombit-logo.jpeg)
-
-  * #### Coda Platform ![Coda Platform logo](assets/images/publishers/coda-platform-logo.jpeg)
+  - #### Voodoo
+  - #### SuperSonic
+  - #### Moonee
+  - #### Green Panda
+  - #### Homa Games
+  - #### Lion Studio
+  - #### BoomBit
+  - #### Coda Platform
 
 ## Meet Our Team
 
@@ -112,28 +87,16 @@ creation of their groundbreaking game, 'Kalamatic.' Five years later,
 We are flying acorns, free to choose any path, skilled at growing into
 towering trees. — Farshad Abdollahi
 
-  * ![Amir Hakimnejad - Unity & Backend Developer at Flying Acorn](assets/images/team/AmirHakimnejad.jpg)
-
-### Amir Hakimnejad
-
+  - ### Amir Hakimnejad
 Unity & Backend Developer
 
-  * ![Ali Sharpasand - Founder and CEO of Flying Acorn](assets/images/team/MohammadAliSharpasand.jpg)
-
-### Ali Sharpasand
-
+  - ### Ali Sharpasand
 Founder and CEO
 
-  * ![Farshad Abdollahi - Unity Developer & Game Designer at Flying Acorn](assets/images/team/FarshadAbdollahi.jpg)
-
-### Farshad Abdollahi
-
+  - ### Farshad Abdollahi
 Unity Developer & Game Designer
 
-  * ![Mostafa Hassanpour - Unity Developer at Flying Acorn](assets/images/team/MostafaHassanour.jpg)
-
-### Mostafa Hassanpour
-
+  - ### Mostafa Hassanpour
 Unity Developer
 
 ## Contact Us
