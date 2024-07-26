@@ -5,8 +5,6 @@ jobs:
     job1:
         name: Create-Markdown-File
         runs-on: ubuntu-latest
-        outputs:
-            output1: ${{ steps.final.outputs }}
         steps:
             - uses: actions/checkout@v4
             - name: Setup Python
@@ -20,13 +18,19 @@ jobs:
                 pip install trafilatura==1.8.1
             - name: Generate Markdown
               run: python assets/python/generate_markdown.py --input index.html --output README.md
+            - name: verify changes
+              id: verify_changes
+              run: |
+                git diff --quiet README.md || echo "changed=true" >> $GITHUB_OUTPUT
             - name: Commit changes
+              if: steps.verify_changes.outputs.changed == 'true'
               run: |
                 git config --local user.email "amir@flyingacorn.studio"
                 git config --local user.name "GitHub Actions"
                 git add README.md
                 git commit -m "Update README.md"
             - name: Push changes
+              if: steps.verify_changes.outputs.changed == 'true'
               uses: ad-m/github-push-action@master
               with:
                 github_token: ${{ secrets.GITHUB_TOKEN }}
