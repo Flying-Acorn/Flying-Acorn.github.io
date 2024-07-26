@@ -19,7 +19,7 @@ jobs:
                 python -m pip install --upgrade pip
                 pip install trafilatura==1.8.1
             - name: Generate Markdown
-              run: python assets/python/generate_markdown.py --input index.html --output >> README.md
+              run: python assets/python/generate_markdown.py --input index.html --output README.md
             - name: Final
               id: final
             #   run: echo "::set-output name=final::$(cat README.md)"
