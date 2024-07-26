@@ -1,5 +1,5 @@
 ﻿name: GitHub Actions
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+run-name: Update README.md of Flying-Acorn/.github repository
 on: [push]
 jobs:
     job1:
@@ -23,13 +23,8 @@ jobs:
             - name: Final
               id: final
               run: cat README.md >> "$GITHUB_OUTPUT"
-
-    job2:
-        name: Commit-Markdown-File
-        runs-on: ubuntu-latest
-        steps:
-            # go to git@github.com:Flying-Acorn/.github.git repository
-            - uses: actions/checkout@v4
+            - name: Go to .github repository
+              uses: actions/checkout@v4
               with:
                     repository: 'Flying-Acorn/.github'
                     ref: main
