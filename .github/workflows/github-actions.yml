@@ -6,7 +6,7 @@ jobs:
         name: Create-Markdown-File
         runs-on: ubuntu-latest
         outputs:
-            output1: ${{ steps.final.outputs.README }}
+            output1: ${{ steps.final.outputs }}
         steps:
             - uses: actions/checkout@v4
             - name: Setup Python
@@ -22,8 +22,7 @@ jobs:
               run: python assets/python/generate_markdown.py --input index.html --output README.md
             - name: Final
               id: final
-            #   run: echo "::set-output name=final::$(cat README.md)"
-              run: echo "README=$(cat README.md)" >> "$GITHUB_OUTPUT"
+              run: cat README.md >> "$GITHUB_OUTPUT"
 
     job2:
         name: Commit-Markdown-File
