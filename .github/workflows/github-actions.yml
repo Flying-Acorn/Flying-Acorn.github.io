@@ -1,30 +1,48 @@
-﻿name: Convert report
-on:
-  - pull_request
-
+﻿name: GitHub Actions
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
 jobs:
-  get-unused-dependencies:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Look for unused librairies
-        run: |
-          mvn dependency:analyze-report --no-transfer-progress
-      - name: Convert HTML to Markdown
-        id: html2markdown
-        if: always()
-        uses: rknj/html2markdown@v0.1.0
-        with:
-          html-file: "index.html"
-      - name: Create issue with report
-        if: always()
-        uses: dacbd/create-issue-action@main
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          title: Maven dependency reports (unused dependencies)
-          body: |
-            ${{ steps.html2markdown.outputs.markdown-content }}
-          assignees: rknj
-      - name: Show content of generated markdown file
-        if: always()
-        run: |
-          cat ${{ steps.html2markdown.outputs.markdown-file }}
+    job1:
+        name: Create-MArkdown-File
+        runs-on: ubuntu-latest
+        outputs:
+            output1: ${{ steps.final.outputs }}
+        steps:
+            - uses: actions/checkout@v4
+            - name: Setup Python
+              uses: actions/setup-python@v5.1.1
+              with:
+                  python-version: '3.10'
+            # add trafilatura 1.8.1 to requirements.txt
+            - name: Install dependencies
+              run: |
+                python -m pip install --upgrade pip
+                pip install trafilatura==1.8.1
+            - name: Generate Markdown
+              id: final
+              run: python assets/python/generate_markdown.py --input index.html --output >> "$GITHUB_OUTPUT"
+            # commit readme.md into another repository here: https://github.com/Flying-Acorn/.github
+
+
+    job2:
+        name: Commit-MArkdown-File
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                repository: Flying-Acorn/.github
+                token: ${{ secrets.GITHUB_TOKEN }}
+            - name: Update readme
+              run: |
+                echo "${{ needs.job1.outputs.output1 }}" > README.md
+            - name: Commit changes
+              run: |
+                git config --local user.email "amir@flyingacorn.studio"
+                git config --local user.name "GitHub Actions"
+                git add README.md
+                git commit -m "Update README.md"
+            - name: Push changes
+              uses: ad-m/github-push-action@master
+              with:
+                github_token: ${{ secrets.GITHUB_TOKEN }}
+                branch: ${{ github.ref }}
