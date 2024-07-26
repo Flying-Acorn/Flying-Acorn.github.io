@@ -1,6 +1,10 @@
 ﻿name: GitHub Actions
 run-name: Update README.md of Flying-Acorn/.github repository
-on: [ push ]
+on:
+  workflow_run:
+    workflows: ["Pages"]
+    types:
+      - completed
 jobs:
   job1:
     name: Trigger-Workflow
