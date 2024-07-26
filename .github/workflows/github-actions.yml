@@ -3,10 +3,10 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
     job1:
-        name: Create-MArkdown-File
+        name: Create-Markdown-File
         runs-on: ubuntu-latest
         outputs:
-            output1: ${{ steps.final.outputs }}
+            output1: ${{ steps.final.outputs.README }}
         steps:
             - uses: actions/checkout@v4
             - name: Setup Python
@@ -19,19 +19,23 @@ jobs:
                 python -m pip install --upgrade pip
                 pip install trafilatura==1.8.1
             - name: Generate Markdown
+              run: python assets/python/generate_markdown.py --input index.html --output >> README.md
+            - name: Final
               id: final
-              run: python assets/python/generate_markdown.py --input index.html --output >> "$GITHUB_OUTPUT"
-            # commit readme.md into another repository here: https://github.com/Flying-Acorn/.github
-
+            #   run: echo "::set-output name=final::$(cat README.md)"
+              run: echo "README=$(cat README.md)" >> "$GITHUB_OUTPUT"
 
     job2:
-        name: Commit-MArkdown-File
+        name: Commit-Markdown-File
         runs-on: ubuntu-latest
         steps:
+            # go to git@github.com:Flying-Acorn/.github.git repository
             - uses: actions/checkout@v4
               with:
-                repository: Flying-Acorn/.github
-                token: ${{ secrets.GITHUB_TOKEN }}
+                    repository: 'Flying-Acorn/.github'
+                    ref: main
+                    token: ${{ secrets.GITHUB_TOKEN }}
+
             - name: Update readme
               run: |
                 echo "${{ needs.job1.outputs.output1 }}" > README.md
