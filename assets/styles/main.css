@@ -176,6 +176,22 @@ h2 {
     margin-bottom: 1rem;
 }
 
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
