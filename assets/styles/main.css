@@ -168,6 +168,11 @@ h2 {
     border-radius: 15%;
 }
 
+.small-icon img {
+    width: 24px;
+    height: 24px;
+}
+
 .team-member img {
     width: 150px;
     height: 150px;
