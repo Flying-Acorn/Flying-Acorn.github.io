@@ -181,19 +181,8 @@ h2 {
     margin-bottom: 1rem;
 }
 
-a:link {
-    text-decoration: none;
-}
-
-a:visited {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-a:active {
+a, a:link, a:visited, a:hover, a:active {
+    color: var(--text-color);
     text-decoration: none;
 }
 
