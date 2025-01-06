@@ -1,0 +1,15 @@
+[
+    {
+      "relation": [
+        "delegate_permission/common.handle_all_urls",
+        "delegate_permission/common.get_login_creds"
+      ],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.FlyingAcorn.NumberChain",
+        "sha256_cert_fingerprints": [
+          "B0:CE:94:CB:8C:F3:46:FA:2B:B5:A4:5B:35:7D:11:5F:C6:9B:0C:4A:4B:4B:2F:48:70:AF:7D:86:5A:AE:F6:02"
+        ]
+      }
+    }
+  ]
