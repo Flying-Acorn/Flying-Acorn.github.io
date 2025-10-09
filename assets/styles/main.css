@@ -140,7 +140,7 @@ a:hover, a:active {
 }
 
 .inline-link:visited {
-    color: var(--gaming-accent) !important; 
+    color: inherit; /* Or specify the desired color, e.g., #your-color */
 }
 
 
