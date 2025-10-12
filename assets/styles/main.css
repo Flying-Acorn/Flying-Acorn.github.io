@@ -139,6 +139,21 @@ a:hover, a:active {
     text-decoration: none;
 }
 
+/* Force LTR for game cards where needed */
+.current-games li[dir="ltr"],
+.partnership-games li[dir="ltr"] {
+    direction: ltr;
+    text-align: left;
+}
+
+.current-games li[dir="ltr"] h4,
+.current-games li[dir="ltr"] p,
+.partnership-games li[dir="ltr"] h4,
+.partnership-games li[dir="ltr"] p {
+    direction: ltr;
+    text-align: left;
+}
+
 .inline-link:visited {
     color: inherit; /* Or specify the desired color, e.g., #your-color */
 }
@@ -250,7 +265,7 @@ h2::after {
     content: '';
     position: absolute;
     bottom: -8px;
-    left: 0;
+    right: 0;
     width: var(--accent-line-width);
     height: var(--accent-line-height);
     background: linear-gradient(90deg, var(--accent-color), var(--gaming-accent));
