@@ -55,7 +55,7 @@
 
 body,
 html {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'IRANRounded', 'Poppins', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -229,6 +229,7 @@ section:target {
     border: none;
     cursor: pointer;
     font-weight: 600;
+    font-family: 'IRANRounded', 'Poppins', sans-serif;
 }
 
 .btn:hover {
@@ -491,7 +492,7 @@ h2::after {
     padding: 0.8rem;
     border: 2px solid rgba(17, 32, 61, 0.15);
     border-radius: var(--border-radius-sm);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'IRANRounded', 'Poppins', sans-serif;
     font-size: 1rem;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
