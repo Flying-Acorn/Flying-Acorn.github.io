@@ -1,0 +1,29 @@
+name: Sync to Flying-Acorn.ir
+
+on:
+  push:
+    branches: [ir]
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.IR_PAT }}
+
+      - name: Push to Flying-Acorn.ir
+        env:
+          IR_PAT: ${{ secrets.IR_PAT }}
+        run: |
+          # Configure git
+          git config --global user.name "Flying-Acorn"
+          git config --global user.email "noreply@github.com"
+          
+          # Add remote with token
+          git remote add ir https://${IR_PAT}@github.com/Flying-Acorn/Flying-Acorn.ir.git
+          
+          # Push
+          git push ir ir:refs/heads/main --force
