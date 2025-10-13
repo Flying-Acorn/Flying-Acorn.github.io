@@ -303,13 +303,68 @@
             <h2>Connect with Us</h2>
             <p>Got an idea or need help? We'd love to hear from you!</p>
             <form action="https://formspree.io/f/xyzndqgz" method="POST" class="contact-form">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
+                <input type="text" name="name" placeholder="What's your name?" required>
+                <input type="email" name="email" placeholder="Your email address" required>
+                <select name="service" id="service-select" required>
+                    <option value="">What can we help with?</option>
+                    <option value="Game Development">Game Development</option>
+                    <option value="Game Design">Game Design</option>
+                    <option value="Server & Backend">Server & Backend</option>
+                    <option value="Ad Campaigns">Ad Campaigns</option>
+                    <option value="Publishing">Publishing</option>
+                    <option value="Support for 2248">Support for <span dir="rtl">زنجیره اعداد: 2248</span></option>
+                    <option value="Support for 2topia">Support for <span dir="rtl">2topia</span></option>
+                    <option value="Other">Other</option>
+                </select>
+                <textarea name="message" placeholder="Tell us more about your project or question" required></textarea>
                 <button type="submit" class="btn">Send Message</button>
             </form>
-            <p>Or email us directly at <a href="mailto:hello@flyingacorn.studio">hello@flyingacorn.studio</a></p>
         </section>
+
+        <!-- Contact form templates - Edit fields and service composition below -->
+        <script type="application/json" id="contact-templates">
+{
+  "fields": {
+    "gameIdea": "Tell us about your game idea:",
+    "operatingSystem": "Platforms - iOS, Android, etc.:",
+    "budget": "Budget range:",
+    "timeline": "Timeline:",
+    "specificRequirements": "Any specific requirements:",
+    "currentStage": "What's the current stage of your project?",
+    "genre": "Game genre:",
+    "targetAudience": "Target audience:",
+    "designNeeds": "Design needs - UI/UX, mechanics, etc.:",
+    "additionalDetails": "Any other details:",
+    "gameType": "What type of app/game is it?",
+    "featuresNeeded": "Features needed - leaderboards, ads, etc.:",
+    "platform": "Platform - Web, Unity, etc.:",
+    "dauMau": "Daily/Monthly Active Users - DAU/MAU:",
+    "gameName": "What's your app/game called?",
+    "targetMarkets": "Target markets:",
+    "goals": "Goals - downloads, revenue, etc.:",
+    "publishingNeeds": "Publishing needs:",
+    "deviceOS": "Device and OS - Galaxy S21, Android 12, etc.:",
+    "nameInGame": "Your in-game name - Visible in profile/leaderboard:",
+    "retentionRate": "Retention - D1, D7, etc.:",
+    "engagement": "Engagement - 1h/day, sessions/day, etc.:",
+    "officialStore": "Official store - App Store, Google Play, etc.:",
+    "yourAppTestLink": "Link to your app/test build:",
+    "describeIssue": "Describe the issue, and steps to reproduce it:",
+    "inquiryTopic": "What's your inquiry about?",
+    "contactPreference": "Preferred contact method:"
+  },
+  "services": {
+    "Game Development": ["gameIdea", "operatingSystem", "budget", "timeline", "specificRequirements"],
+    "Game Design": ["currentStage", "genre", "targetAudience", "designNeeds", "additionalDetails"],
+    "Server & Backend": ["gameType", "featuresNeeded", "platform", "dauMau"],
+    "Ad Campaigns": ["gameName", "officialStore", "operatingSystem", "targetMarkets", "goals"],
+    "Publishing": ["gameName", "operatingSystem", "genre", "yourAppTestLink", "retentionRate", "engagement", "publishingNeeds"],
+    "Support for 2248": ["deviceOS", "nameInGame", "describeIssue"],
+    "Support for 2topia": ["deviceOS", "nameInGame", "describeIssue"],
+    "Other": ["inquiryTopic", "contactPreference"]
+  }
+}
+        </script>
 
         <footer>
             <a class="small-icon" href="https://www.linkedin.com/company/flying-acorn" target="_blank" rel="noopener">

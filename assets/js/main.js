@@ -21,3 +21,35 @@ window.addEventListener('scroll', function () {
         navbar.classList.remove('transparent');
     }
 });
+
+// Load service templates from embedded JSON in index.html
+// To edit templates: find the <script id="contact-templates"> in index.html
+// - Add/edit fields in "fields" dictionary
+// - Compose services by listing field IDs in "services"
+let templateData = {};
+
+function buildTemplateText(fieldIds) {
+  if (!fieldIds || !Array.isArray(fieldIds)) return '';
+  return fieldIds
+    .map(id => templateData.fields[id])
+    .filter(text => text) // Remove undefined fields
+    .join('\n\n');
+}
+
+// Load templates from embedded JSON script
+try {
+  const templateScript = document.getElementById('contact-templates');
+  if (templateScript) {
+    templateData = JSON.parse(templateScript.textContent);
+  }
+} catch (error) {
+  console.error('Error parsing templates:', error);
+}
+
+// Attach the event listener
+document.getElementById('service-select').addEventListener('change', function() {
+  const selectedService = this.value;
+  const textarea = document.querySelector('.contact-form textarea');
+  const fieldIds = templateData.services ? templateData.services[selectedService] : null;
+  textarea.value = fieldIds ? buildTemplateText(fieldIds) : '';
+});
