@@ -295,8 +295,8 @@
             <h2>با ما در ارتباط باشید</h2>
             <p>ایده‌ای دارید یا به کمک نیاز دارید؟ خوشحال می‌شویم از شما بشنویم!</p>
             <form action="https://formspree.io/f/xyzndqgz" method="POST" class="contact-form">
-                <input type="text" name="name" placeholder="اسم شما چیست؟" required>
-                <input type="email" name="email" placeholder="آدرس ایمیل شما" required>
+                <input type="text" name="name" placeholder="اسم شما" required>
+                <input type="email" name="email" placeholder="آدرس ایمیل" required>
                 <select name="service" id="service-select" required>
                     <option value="">چطور می‌توانیم کمک کنیم؟</option>
                     <option value="Game Development">توسعه بازی</option>
@@ -308,6 +308,7 @@
                     <option value="Support for 2topia">پشتیبانی <span dir="rtl">2topia</span></option>
                     <option value="Other">سایر</option>
                 </select>
+                <div id="dynamic-fields"></div>
                 <textarea name="message" placeholder="درباره پروژه یا سوال خود بیشتر بگویید" required></textarea>
                 <button type="submit" class="btn">ارسال پیام</button>
             </form>
@@ -317,43 +318,52 @@
         <script type="application/json" id="contact-templates">
 {
   "fields": {
-    "gameIdea": "درباره ایده بازی خود بگویید:",
-    "operatingSystem": "پلتفرم‌ها - iOS، Android و غیره:",
-    "budget": "محدوده بودجه:",
-    "timeline": "زمان‌بندی:",
-    "specificRequirements": "نیازهای خاص:",
-    "currentStage": "مرحله فعلی پروژه شما چیست؟",
-    "genre": "ژانر بازی:",
-    "targetAudience": "مخاطب هدف:",
-    "designNeeds": "نیازهای طراحی - UI/UX، مکانیک‌ها و غیره:",
-    "additionalDetails": "جزئیات دیگر:",
+    "gameIdea": "درباره ایده بازی خود بگویید",
+    "operatingSystem": "پلتفرم‌ها - iOS، Android و غیره",
+    "budget": "محدوده بودجه",
+    "timeline": "زمان‌بندی",
+    "currentStage": "پروژه شما در چه مرحله‌ای از توسعه است؟",
+    "genre": "ژانر بازی",
+    "targetAudience": "مخاطب هدف",
+    "designNeeds": "نیازهای طراحی - UI/UX، مکانیک‌ها و غیره",
+    "additionalDetails": "جزئیات دیگر",
     "gameType": "نوع اپلیکیشن/بازی شما چیست؟",
-    "featuresNeeded": "امکانات مورد نیاز - جدول امتیازات، خرید درون‌برنامه ای و غیره:",
-    "platform": "پلتفرم - وب، Unity و غیره:",
-    "dauMau": "کاربران فعال روزانه/ماهانه - DAU/MAU:",
+    "featuresNeeded": "امکانات مورد نیاز - جدول امتیازات، تبلیغات و غیره",
+    "platform": "پلتفرم - وب، Unity و غیره",
+    "dauMau": "کاربران فعال روزانه/ماهانه - DAU/MAU",
     "gameName": "نام اپلیکیشن/بازی شما چیست؟",
-    "targetMarkets": "بازارهای هدف:",
-    "goals": "اهداف - دانلود، درآمد و غیره:",
-    "publishingNeeds": "نیازهای انتشار:",
-    "deviceOS": "دستگاه و سیستم‌عامل - Galaxy S21، Android 12 و غیره:",
-    "nameInGame": "نام شما در بازی - قابل مشاهده در پروفایل/جدول امتیازات:",
-    "retentionRate": "نگهداری - D1، D7 و غیره:",
-    "engagement": "تعامل - ۱ ساعت/روز، جلسات/روز و غیره:",
-    "officialStore": "لینک فروشگاه رسمی - App Store، Google Play، کافه‌بازار و غیره:",
-    "yourAppTestLink": "لینک به اپلیکیشن/نسخه آزمایشی شما:",
-    "describeIssue": "مشکل را توصیف کنید و مراحل بازتولید آن:",
+    "targetMarkets": "بازارهای هدف",
+    "goals": "اهداف - دانلود، افزایش درآمد و غیره",
+    "publishingNeeds": "نیازهای انتشار",
+    "deviceOS": "مدل دستگاه و سیستم‌عامل - Galaxy S21، Android 12 و غیره",
+    "nameInGame": "نام شما در بازی - قابل مشاهده در پروفایل/جدول امتیازات",
+    "retentionRate": "ریتنشن - D1، D7 و غیره",
+    "engagement": "انگیجمنت/پلی‌تایم - ۱ ساعت/روز، جلسات/روز و غیره",
+    "officialStore": "لینک به فروشگاه رسمی - App Store، Google Play و غیره",
+    "yourAppTestLink": "لینک به اپلیکیشن/نسخه آزمایشی شما",
+    "describeIssue": "مشکل را توصیف کنید و مراحل بازتولید آن",
     "inquiryTopic": "سوال شما درباره چیست؟",
-    "contactPreference": "روش تماس ترجیحی:"
+    "contactPreference": "روش تماس ترجیحی"
+  },
+  "messages": {
+    "Game Development": "درباره ایده بازی خود، زمان‌بندی و بودجه مد نظر خود بگویید:\n",
+    "Game Design": "جزئیات بیشتری درباره پروژه خود بگویید:\n",
+    "Server & Backend": "بگویید چه امکاناتی نیاز دارید (جدول امتیازات، تبلیغات و غیره):\n",
+    "Ad Campaigns": "اهداف کمپین خود را بگویید (دانلود، افزایش درآمد و غیره):\n",
+    "Publishing": "نیازهای انتشار خود را بگویید (UA، انتشار جهانی و غیره):\n",
+    "Support for 2248": "مشکل را برایمان توضیح دهید، در صورت امکان مراحل ایجاد آن را با جزئیات بگویید:\n",
+    "Support for 2topia": "مشکل را برایمان توضیح دهید، در صورت امکان مراحل ایجاد آن را با جزئیات بگویید:\n",
+    "Other": "لطفاً سوال یا مشکل خود را با جزئیات بیان کنید:\n"
   },
   "services": {
-    "Game Development": ["gameIdea", "operatingSystem", "budget", "timeline", "specificRequirements"],
-    "Game Design": ["currentStage", "genre", "targetAudience", "designNeeds", "additionalDetails"],
-    "Server & Backend": ["gameType", "featuresNeeded", "platform", "dauMau"],
-    "Ad Campaigns": ["gameName", "officialStore", "operatingSystem", "targetMarkets", "goals"],
-    "Publishing": ["gameName", "operatingSystem", "genre", "yourAppTestLink", "retentionRate", "engagement", "publishingNeeds"],
-    "Support for 2248": ["deviceOS", "nameInGame", "describeIssue"],
-    "Support for 2topia": ["deviceOS", "nameInGame", "describeIssue"],
-    "Other": ["inquiryTopic", "contactPreference"]
+    "Game Development": ["operatingSystem"],
+    "Game Design": ["currentStage", "genre", "targetAudience", "designNeeds"],
+    "Server & Backend": ["platform", "dauMau"],
+    "Ad Campaigns": ["gameName", "officialStore", "targetMarkets"],
+    "Publishing": ["gameName", "operatingSystem", "yourAppTestLink", "retentionRate", "engagement"],
+    "Support for 2248": ["deviceOS", "nameInGame"],
+    "Support for 2topia": ["deviceOS", "nameInGame"],
+    "Other": ["contactPreference"]
   }
 }
         </script>
