@@ -315,6 +315,7 @@
                     <option value="Support for 2topia">Support for <span dir="rtl">2topia</span></option>
                     <option value="Other">Other</option>
                 </select>
+                <div id="dynamic-fields"></div>
                 <textarea name="message" placeholder="Tell us more about your project or question" required></textarea>
                 <button type="submit" class="btn">Send Message</button>
             </form>
@@ -324,43 +325,52 @@
         <script type="application/json" id="contact-templates">
 {
   "fields": {
-    "gameIdea": "Tell us about your game idea:",
-    "operatingSystem": "Platforms - iOS, Android, etc.:",
-    "budget": "Budget range:",
-    "timeline": "Timeline:",
-    "specificRequirements": "Any specific requirements:",
+    "gameIdea": "Tell us about your game idea",
+    "operatingSystem": "Platforms - iOS, Android, etc.",
+    "budget": "Budget range",
+    "timeline": "Timeline",
     "currentStage": "What's the current stage of your project?",
-    "genre": "Game genre:",
-    "targetAudience": "Target audience:",
-    "designNeeds": "Design needs - UI/UX, mechanics, etc.:",
-    "additionalDetails": "Any other details:",
+    "genre": "Game genre",
+    "targetAudience": "Target audience",
+    "designNeeds": "Design needs - UI/UX, mechanics, etc.",
+    "additionalDetails": "Any other details",
     "gameType": "What type of app/game is it?",
-    "featuresNeeded": "Features needed - leaderboards, ads, etc.:",
-    "platform": "Platform - Web, Unity, etc.:",
-    "dauMau": "Daily/Monthly Active Users - DAU/MAU:",
+    "featuresNeeded": "Features needed - leaderboards, ads, etc.",
+    "platform": "Platform - Web, Unity, etc.",
+    "dauMau": "Daily/Monthly Active Users - DAU/MAU",
     "gameName": "What's your app/game called?",
-    "targetMarkets": "Target markets:",
-    "goals": "Goals - downloads, revenue, etc.:",
-    "publishingNeeds": "Publishing needs:",
-    "deviceOS": "Device and OS - Galaxy S21, Android 12, etc.:",
-    "nameInGame": "Your in-game name - Visible in profile/leaderboard:",
-    "retentionRate": "Retention - D1, D7, etc.:",
-    "engagement": "Engagement - 1h/day, sessions/day, etc.:",
-    "officialStore": "Official store - App Store, Google Play, etc.:",
-    "yourAppTestLink": "Link to your app/test build:",
-    "describeIssue": "Describe the issue, and steps to reproduce it:",
+    "targetMarkets": "Target markets",
+    "goals": "Goals - downloads, revenue, etc.",
+    "publishingNeeds": "Publishing needs",
+    "deviceOS": "Device and OS - Galaxy S21, Android 12, etc.",
+    "nameInGame": "Your in-game name - Visible in profile/leaderboard",
+    "retentionRate": "Retention - D1, D7, etc.",
+    "engagement": "Engagement - 1h/day, sessions/day, etc.",
+    "officialStore": "Official store - App Store, Google Play, etc.",
+    "yourAppTestLink": "Link to your app/test build",
+    "describeIssue": "Describe the issue, and steps to reproduce it",
     "inquiryTopic": "What's your inquiry about?",
-    "contactPreference": "Preferred contact method:"
+    "contactPreference": "Preferred contact method"
+  },
+  "messages": {
+    "Game Development": "Tell us about your game idea, timeline, and budget:\n",
+    "Game Design": "Tell us any additional details about your project:\n",
+    "Server & Backend": "Tell us what features you need (leaderboards, ads, etc.):\n",
+    "Ad Campaigns": "Tell us your campaign goals (downloads, revenue, etc.):\n",
+    "Publishing": "Tell us your publishing needs (UA, Global Release, etc.):\n",
+    "Support for 2248": "Describe the issue you're experiencing and steps to reproduce it:\n",
+    "Support for 2topia": "Describe the issue you're experiencing and steps to reproduce it:\n",
+    "Other": "Tell us what your inquiry is about:\n"
   },
   "services": {
-    "Game Development": ["gameIdea", "operatingSystem", "budget", "timeline", "specificRequirements"],
-    "Game Design": ["currentStage", "genre", "targetAudience", "designNeeds", "additionalDetails"],
-    "Server & Backend": ["gameType", "featuresNeeded", "platform", "dauMau"],
-    "Ad Campaigns": ["gameName", "officialStore", "operatingSystem", "targetMarkets", "goals"],
-    "Publishing": ["gameName", "operatingSystem", "genre", "yourAppTestLink", "retentionRate", "engagement", "publishingNeeds"],
-    "Support for 2248": ["deviceOS", "nameInGame", "describeIssue"],
-    "Support for 2topia": ["deviceOS", "nameInGame", "describeIssue"],
-    "Other": ["inquiryTopic", "contactPreference"]
+    "Game Development": ["operatingSystem"],
+    "Game Design": ["currentStage", "genre", "targetAudience", "designNeeds"],
+    "Server & Backend": ["platform", "dauMau"],
+    "Ad Campaigns": ["gameName", "officialStore", "targetMarkets"],
+    "Publishing": ["gameName", "operatingSystem", "yourAppTestLink", "retentionRate", "engagement"],
+    "Support for 2248": ["deviceOS", "nameInGame"],
+    "Support for 2topia": ["deviceOS", "nameInGame"],
+    "Other": ["contactPreference"]
   }
 }
         </script>

@@ -511,6 +511,22 @@ h2::after {
     resize: vertical;
 }
 
+#dynamic-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+#dynamic-fields input,
+#dynamic-fields textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#dynamic-fields .dynamic-field textarea {
+    min-height: 80px;
+}
+
 .contact-form button {
     width: 100%;
     margin-top: 0.5rem;
