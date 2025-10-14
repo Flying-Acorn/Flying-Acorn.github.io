@@ -165,7 +165,7 @@ nav ul li a:active {
 }
 
 nav.transparent {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: var(--card-bg);
 }
 
 .more {
@@ -285,6 +285,7 @@ h2::after {
     padding: var(--card-padding);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid rgba(17, 32, 61, 0.08); 
+    position: relative;
 }
 
 .card:hover {
@@ -309,12 +310,32 @@ h2::after {
     height: var(--icon-size-medium);
 }
 
+.team-member .small-icon img {
+    width: var(--icon-size-medium);
+    height: var(--icon-size-medium);
+    border-radius: 0;
+}
+
+.team-member .small-icon {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .team-member img {
     width: var(--icon-size-xl);
     height: var(--icon-size-xl);
     border-radius: var(--border-radius-full);
     object-fit: cover;
     margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-member {
+    min-height: 350px;
 }
 
 @media (max-width: 768px) {
