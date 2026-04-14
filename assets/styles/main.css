@@ -233,6 +233,26 @@ section:target {
     margin-top: -100px;
 }
 
+#message-links {
+    width: 100%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-auto-flow: column;
+    gap: 10px;
+}
+
+.messagebtn {
+    text-align: center;
+    width: 200px;
+}
+
+@media (max-width: 768px) {
+    #message-links {
+        grid-auto-flow: row;
+    }
+}
+
 .btn {
     display: inline-block;
     background: var(--secondary-color); 

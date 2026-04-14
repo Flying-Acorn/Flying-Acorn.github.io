@@ -93,3 +93,28 @@ document.getElementById('service-select').addEventListener('change', function() 
   // Create dynamic fields
   createDynamicFields(fieldIds);
 });
+
+
+function openMessenger(messenger) {
+  const form = document.querySelector('.contact-form');
+  
+  const formData = new FormData(form);
+  let fullMessage = "ارجاع از فرم سایت بلوط پرنده\n";
+
+  for (const [key, value] of formData.entries()) {
+    // Check if the field is not empty
+    if (value.trim() !== "") {
+      // Capitalize the first letter of the key for nicer formatting
+      const formattedKey = key.charAt(0).toUpperCase() + key.slice(1);
+      fullMessage += `${formattedKey}: ${value}\n`;
+    }
+  }
+
+  const encodedMessage = encodeURIComponent(fullMessage);
+
+  if (messenger.toLowerCase() === "bale") {
+    window.open(`https://ble.ir/flyingacorn?text=${encodedMessage}`, '_blank');
+  } else {
+    window.open(`https://t.me/FlyingAcornOy?text=${encodedMessage}`, '_blank');
+  }
+}

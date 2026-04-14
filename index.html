@@ -400,7 +400,12 @@
                 </select>
                 <div id="dynamic-fields"></div>
                 <textarea name="message" placeholder="درباره پروژه یا سوال خود بیشتر بگویید" required></textarea>
-                <button type="submit" class="btn">ارسال پیام</button>
+                <!-- <button type="submit" class="btn">ارسال پیام</button> -->
+                <div id="message-links">
+                    <button type="button" class="btn messagebtn" onclick="openMessenger('Bale')">ارسال در بله</button>
+                    <button type="button" class="btn messagebtn" onclick="openMessenger('telegram')">ارسال در تلگرام</button>
+                </div>
+
             </form>
         </section>
 
