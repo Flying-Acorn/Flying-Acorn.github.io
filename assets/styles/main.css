@@ -273,7 +273,8 @@ h2::after {
 
 
 @media (max-width: 768px) {
-    .current-games {
+    .current-games,
+    .partnership-games {
         grid-template-columns: repeat(2, 1fr);
         gap: 0.5rem;
     }
