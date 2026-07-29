@@ -1361,6 +1361,15 @@ zetaglobal.net,757,RESELLER
 zetaglobal.net,998,RESELLER
 zmaticoo.com,5135224,RESELLER
 zoomd.com,88478941,RESELLER
+#============================#============================Admob
+#============================TopOn
+#============================StartIO
+#============================UnityAds
+#============================mintegral
+inventorypartnerdomain=thunder-monetize.com
+inventorypartnerdomain=rhebus.works
+#============================BigoAds
+#============================Liftoff
 #============================# CAS.ai Updated Jul 13, 2026
 OwnerDomain=cas.ai
 cas.ai, 922e6092, DIRECT
