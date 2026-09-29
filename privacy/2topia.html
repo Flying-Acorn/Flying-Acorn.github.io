@@ -36,7 +36,8 @@
         <p><strong>In short:</strong></p>
         <ul>
             <li>You can play without an account. The game creates an anonymous player account for your device.</li>
-            <li>We never sell your data.</li>
+            <li>Signing in with Google or Apple is optional and is used only to back up and restore your game progress.</li>
+            <li>We never sell your data, and we never use your Google account data for advertising.</li>
             <li>The game is free and shows ads; our analytics and advertising partners are listed below.</li>
             <li>You can ask us to delete your data at any time.</li>
         </ul>
@@ -53,6 +54,9 @@
         <li>your leaderboard scores.</li>
     </ul>
     <p>Your player name, avatar and scores are visible to other players on the leaderboards.</p>
+    <p>If you link a Google account or an Apple ID, the game also keeps a backup copy of your game progress on our
+        servers, so that it can be restored on another device. Without a linked account, your progress is kept only on
+        your device.</p>
 
     <h3>Device and app information</h3>
     <p>To run the game and our services, the game sends us technical information about your device and installation:
@@ -60,6 +64,22 @@
         hardware details, app version, the store you installed the game from, your time zone and the number of sessions
         played. From the IP address of your connection we determine your approximate country, which we use to route you
         to the right server and to show region-appropriate content. We do not collect your precise location.</p>
+
+    <h3 id="google-data">Google account information (only if you choose to sign in with Google)</h3>
+    <p>You can link a Google account from the profile screen. The game then requests only the <code>openid</code>,
+        <code>email</code> and <code>profile</code> permissions, and we receive and store:</p>
+    <ul>
+        <li>your Google account identifier;</li>
+        <li>your email address;</li>
+        <li>your name (first name, last name and display name);</li>
+        <li>the web address of your profile picture.</li>
+    </ul>
+    <p>We do not request access to any other Google data, such as your contacts, files, calendar or Google Play activity.
+    </p>
+
+    <h3>Apple account information (only if you choose to sign in with Apple)</h3>
+    <p>If you link an Apple ID, we receive your Apple user identifier and, if you choose to share them, your email
+        address (which may be an Apple private relay address) and your name.</p>
 
     <h3>Purchases</h3>
     <p>In-app purchases are processed by the app store you use (Google Play or the App Store). We receive the purchase
@@ -76,6 +96,8 @@
     <ul>
         <li><strong>To run the game:</strong> keep your progress, deliver purchases, run the leaderboards, and send
             notifications you have allowed.</li>
+        <li><strong>To back up and restore your progress</strong> across devices when you link a Google or Apple
+            account.</li>
         <li><strong>To support you:</strong> answer your questions and restore or correct your game data on request.
         </li>
         <li><strong>To improve the game:</strong> understand how the game is played, fix crashes and balance the game,
@@ -84,7 +106,22 @@
         <li><strong>To keep the game fair and secure:</strong> prevent cheating, fraud and abuse.</li>
     </ul>
 
-    <h2 id="share">3. Who we share information with</h2>
+    <h2 id="google-use">3. How we use Google user data</h2>
+    <p>The Google account information described above is used only to identify your account, so that your saved game
+        progress can be found and restored when you sign in again, including on another device, and to show in the game
+        which account is linked.</p>
+    <ul>
+        <li>It is not used for advertising, including personalised or retargeted ads.</li>
+        <li>It is not sold and it is not shared with our analytics or advertising partners.</li>
+        <li>It is not used to build a profile of you, to determine creditworthiness, or to train artificial
+            intelligence or machine learning models.</li>
+        <li>Our staff read it only when you ask us for support, when needed for security, or when required by law.</li>
+    </ul>
+    <p>Flying Acorn's use and transfer of information received from Google APIs will adhere to the
+        <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank"
+            rel="noopener noreferrer">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+    <h2 id="share">4. Who we share information with</h2>
     <p>We do not sell your personal information. We share information only with the following service providers, which
         process it on our behalf or under their own privacy policies:</p>
     <ul>
@@ -100,37 +137,45 @@
             ironSource, Meta Audience Network, Pangle, Mintegral, InMobi, Liftoff, DT Exchange, Bigo Ads and Yandex Ads.
         </li>
         <li><strong>App stores</strong> (Google Play, App Store) to process purchases.</li>
+        <li><strong>Sign-in providers</strong> (<a href="https://policies.google.com/privacy" target="_blank"
+                rel="noopener noreferrer">Google</a>, <a href="https://www.apple.com/legal/privacy/" target="_blank"
+                rel="noopener noreferrer">Apple</a>) when you choose to sign in with them.</li>
     </ul>
     <p>We may also disclose information when required by law, to respond to legal process, or to protect the rights,
         safety and security of our players, our company or others. If our business is transferred to another company,
         your information may be transferred with it under this policy.</p>
 
-    <h2 id="ads">4. Advertising choices</h2>
+    <h2 id="ads">5. Advertising choices</h2>
     <p>Where required by law, including in the European Economic Area and the United Kingdom, the game asks for your
         consent before ads are personalised, and you can change your choice later from the game's settings. On iOS, the
         game asks for your permission before tracking you across other companies' apps and websites. You can also reset
         or limit your advertising identifier in your device settings.</p>
 
-    <h2 id="security">5. How we store and protect information</h2>
-    <p>Your game account and game data are stored on servers operated by Flying Acorn. All
+    <h2 id="security">6. How we store and protect information</h2>
+    <p>Your game account, game data and linked account information are stored on servers operated by Flying Acorn. All
         communication between the game and our servers is encrypted with HTTPS. Access to player data is limited to the
         staff who need it to run and support the game. Depending on where you play, your information may be processed on
         servers outside your country. No system is perfectly secure, but we take reasonable technical and organisational
         measures to protect your information.</p>
 
-    <h2 id="retention">6. How long we keep information, and deleting it</h2>
+    <h2 id="retention">7. How long we keep information, and deleting it</h2>
     <ul>
-        <li>We keep your game account and game data for as long as your account exists, or until you
+        <li>We keep your game account and game data and linked account information for as long as your account exists, or until you
             ask us to delete it.</li>
-        <li>To delete your account and all information we hold about it, email
-            <a href="mailto:support@flyingacorn.studio">support@flyingacorn.studio</a> and include the
+        <li>You can unlink your Google or Apple account at any time from the profile screen.</li>
+        <li>To delete your account and all information we hold about it, including your linked Google or Apple account information and your saved progress, email
+            <a href="mailto:support@flyingacorn.studio">support@flyingacorn.studio</a> from the email address of your linked account, or include the
             public player ID shown in the game's settings. We will delete it within 30 days, except where we must keep
             some information to meet a legal obligation.</li>
+        <li>You can also remove the game's access from your Google account at
+            <a href="https://myaccount.google.com/connections" target="_blank"
+                rel="noopener noreferrer">myaccount.google.com/connections</a>, or from your Apple ID settings under
+            "Sign in with Apple".</li>
         <li>Our analytics and advertising partners keep the data they collect according to their own retention
             policies, linked above.</li>
     </ul>
 
-    <h2 id="rights">7. Your rights</h2>
+    <h2 id="rights">8. Your rights</h2>
     <p>Depending on where you live, including under the EU General Data Protection Regulation, you have the right to
         access, correct, delete or receive a copy of your personal data, to object to or restrict its processing, and to
         withdraw your consent at any time. To use these rights, contact us at
@@ -139,17 +184,17 @@
         <a href="https://tietosuoja.fi/en/home" target="_blank" rel="noopener noreferrer">Office of the Data Protection
             Ombudsman</a>.</p>
 
-    <h2 id="children">8. Children</h2>
+    <h2 id="children">9. Children</h2>
     <p>The game is not directed at children under 13, and we do not knowingly collect personal information from them. If
         you believe a child under 13 has given us personal information, contact us at
         <a href="mailto:support@flyingacorn.studio">support@flyingacorn.studio</a> and we will delete it.</p>
 
-    <h2 id="changes">9. Changes to this policy</h2>
+    <h2 id="changes">10. Changes to this policy</h2>
     <p>We may update this policy from time to time. We will change the effective date at the top of this page, and if
-        we change how the game uses personal information in a significant way, we will tell you in the game before the change
+        we change how the game uses Google user data or other personal information in a significant way, we will tell you in the game before the change
         takes effect.</p>
 
-    <h2 id="contact">10. Contact</h2>
+    <h2 id="contact">11. Contact</h2>
     <p>Flying Acorn Oy, Espoo, Finland<br>
         Email: <a href="mailto:support@flyingacorn.studio">support@flyingacorn.studio</a><br>
         Game page: <a href="https://flyingacorn.studio/twotopia/">flyingacorn.studio/twotopia</a></p>
