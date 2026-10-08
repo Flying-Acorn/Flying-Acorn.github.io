@@ -1,0 +1,4 @@
+url: "https://flyingacorn.studio"
+include: [".well-known"]
+plugins:
+  - jekyll-sitemap
